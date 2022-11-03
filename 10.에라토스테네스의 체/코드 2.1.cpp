@@ -2,7 +2,7 @@
 #include <algorithm>
 
 using namespace std;
-//
+
 bool check[1001];
 int x, y, cnt;
 
