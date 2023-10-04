@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string str = "I am happy";
+    
+    cout << "두 번째 원소 : " << str[2] << "\n";
+    cout << "문자열 변경 전 : " << str << "\n";
+    str[5] = 'g';
+    cout << "문자열 변경 후 : " << str << "\n";
+    
+    return 0;
+}
+/*
+두 번째 원소 : a
+문자열 변경 전 : I am happy
+문자열 변경 후 : I am gappy
+*/
