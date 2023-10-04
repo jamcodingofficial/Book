@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+void printArray(int a[], int cnt){
+    for(int i=0; i<cnt; i++){
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[5] = {92, 12, 9, 20, 30};
+    int key;
+    
+    printf("선택 정렬 실행 전\n");
+    printArray(arr, 5);
+    printf("\n");
+    
+    for(int i=0; i<4; i++){
+        key = i;
+        for(int j=i+1; j<5; j++){
+            if(arr[key] > arr[j]){
+                key = j;
+            }
+        }
+        if(key != i){
+            int tmp = arr[key];
+            arr[key] = arr[i];
+            arr[i] = tmp;
+        }
+        printf("Step %d : ", i+1);
+        printArray(arr, 5);
+    }
+
+    printf("\n선택 정렬 실행 후\n");
+    printArray(arr, 5);
+    
+    return 0;
+}
+/*
+선택 정렬 실행 전
+92 12 9 20 30 
+
+Step 1 : 9 12 92 20 30 
+Step 2 : 9 12 92 20 30 
+Step 3 : 9 12 20 92 30 
+Step 4 : 9 12 20 30 92 
+
+선택 정렬 실행 후
+9 12 20 30 92 
+*/
