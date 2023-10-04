@@ -28,8 +28,9 @@ int main(){
 
     printf("\n버블 정렬 실행 후\n");
     printArray(arr, 5);
-}
 
+    return 0;
+}
 /*
 버블 정렬 실행 전
 40 30 70 10 50 
