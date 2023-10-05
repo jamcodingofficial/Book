@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    int number1 = 200;
+    long number2 = 3000000000;
+    float number3 = 3.14f;
+    double number4 = 1.592;
+    
+    string str1 = to_string(number1); // 200 -> "200"
+    string str2 = to_string(number2); // 3000000000 -> "3000000000"
+    string str3 = to_string(number3); // 3.14 -> "3.14"
+    string str4 = to_string(number4); // 1.592 -> "1.592"
+ 
+    cout << str1 << " " << str2 << " " << str3 << " " << str4;
+    
+    return 0;
+}
+/*
+200 3000000000 3.140000 1.592000
+*/

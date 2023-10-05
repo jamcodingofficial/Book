@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color;
+    cout << "color.empty() : " << color.empty() << ", color : " << color << "\n";
+    
+    color = "skyblue";
+    cout << "color.empty() : " << color.empty() << ", color : " << color << "\n";
+    
+    color = "";
+    cout << "color.empty() : " << color.empty() << ", color : " << color << "\n";
+    
+    return 0;
+}
+/*
+color.empty() : 1, color : 
+color.empty() : 0, color : skyblue
+color.empty() : 1, color : 
+*/

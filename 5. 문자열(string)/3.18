@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color = "red";
+    
+    cout << "color : " << color << "\n";
+    cout << "length() : " << color.length() << ", capacity() : " << color.capacity() << "\n";
+    
+    color.clear(); // color = "";
+    
+    cout << "color : " << color << "\n";
+    cout << "length() : " << color.length() << ", capacity() : " << color.capacity() << "\n";
+    
+    return 0;
+}
+/*
+color : red
+length() : 3, capacity() : 22
+color : 
+length() : 0, capacity() : 22
+*/

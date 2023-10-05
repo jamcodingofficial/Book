@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color;
+    
+    cout << "What is your favorite color? ";
+    getline(cin, color); // blue, gray
+    // getline(cin, color, '\n');
+    
+    cout << "You like " << color;
+    
+    return 0;
+}
+/*
+What is your favorite color? blue, gray
+You like blue, gray
+*/

@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color = "dark & red";
+    
+    cout << color.substr(5) << "\n"; // & red
+    cout << color.substr(0, 6) << "\n"; // dark &
+    cout << color.substr(1, 20) << "\n"; // ark & red
+    cout << color.substr(color.find("red")) << "\n"; // red
+    
+    return 0;
+}
+/*
+& red
+dark &
+ark & red
+red
+*/

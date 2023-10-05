@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string str1 = "200";
+    string str2 = "3000000000";
+    string str3 = "3.14";
+    string str4 = "1.592";
+    
+    int number1 = stoi(str1); // "200" -> 200
+    long number2 = stol(str2); // "3000000000" -> 3000000000
+    float number3 = stof(str3); // "3.14" -> 3.14
+    double number4 = stod(str4); // "1.592" -> 1.592
+ 
+    cout << number1 << " " << number2 << " " << number3 << " " << number4;
+    
+    return 0;
+}
+/*
+200 3000000000 3.14 1.592
+*/

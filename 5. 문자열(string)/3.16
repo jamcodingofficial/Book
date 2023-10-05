@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color = "khaki";
+    
+    cout << *color.begin() << "\n";
+    cout << *(color.begin()+1) << "\n";
+    cout << *(color.begin()+2) << "\n";
+    cout << *(color.begin()+3) << "\n";
+    cout << *(color.begin()+4) << "\n";
+    
+    return 0;
+}
+/*
+k
+h
+a
+k
+i
+*/

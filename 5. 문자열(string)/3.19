@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main(){
+    string color = "black & orange";
+    
+    color.replace(0, 5, "lime");
+    cout << "color : " << color << "\n"; // lime & orange
+    
+    color.replace(color.begin(), color.begin()+4, "black");
+    cout << "color : " << color << "\n"; // black & orange
+    
+    color.replace(color.begin()+8, color.end(), "rose");
+    cout << "color : " << color << "\n"; // black & rose
+    
+    return 0;
+}
+/*
+color : lime & orange
+color : black & orange
+color : black & rose
+*/
