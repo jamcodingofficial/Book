@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+int queue[10];
+int front;
+int back = -1;
+
+void push(int x){
+    if(back < 9){
+        back++;
+        queue[back] = x;
+        printf("push : %d\n", queue[back]);
+    }else{
+        printf("Queue Overflow!\n");
+    }
+}
+
+void pop(){
+    if(front <= back){
+        printf("pop : %d\n", queue[front]);
+        queue[front] = 0;
+        front++;
+    }else{
+        printf("Empty Queue!\n");
+    }
+}
+
+void get_front(){
+    if(front >= 0){
+        printf("get_front : %d\n", queue[front]);
+    }else{
+        printf("Empty Queue!\n");
+    }
+}
+
+void get_back(){
+    if(back >= 0){
+        printf("get_back : %d\n", queue[back]);
+    }else{
+        printf("Empty Queue!\n");
+    }
+}
+
+void printQueue(){
+    if(front <= back){
+        printf("printQueue : ");
+        for(int i=front; i<=back; i++){
+            printf("%d ", queue[i]);
+        }
+        printf("\n");
+    }else{
+        printf("Empty Queue!\n");
+    }
+}
+
+int main(){
+    push(50);
+    push(30);
+    get_front();
+    pop();
+    push(60);
+    printQueue();
+    get_back();
+    pop();
+    pop();
+    pop();
+    
+    return 0;
+}
+/*
+push : 50
+push : 30
+get_front : 50
+pop : 50
+push : 60
+printQueue : 30 60 
+get_back : 60
+pop : 30
+pop : 60
+Empty Queue!
+*/
