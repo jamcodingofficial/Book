@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<int> v = {70, 30, 50, 90, 20};
+    
+    cout << "첫 번째 원소 : " << v.front() << ", " << v[0] << "\n";
+    cout << "마지막 원소 : " << v.back() << ", " << v[v.size()-1] << "\n";
+    return 0;
+}
+/*
+첫 번째 원소 : 70, 70
+마지막 원소 : 20, 20
+*/

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <deque>
+
+using namespace std;
+
+int main(){
+    deque<int> d = {10, 20, 30, 40, 50};
+    
+    cout << "실행 전 : ";
+    for(int i=0; i<d.size(); i++){
+        cout << d[i] << " ";
+    }
+    cout << "\n";
+    
+    d.pop_front(); // 가장 앞에 있는 원소를 삭제
+    d.push_front(5); // 가장 앞에 5를 삽입
+    
+    cout << "실행 후 : ";
+    for(int i=0; i<d.size(); i++){
+        cout << d[i] << " ";
+    }
+    
+    return 0;
+}
+
+/*
+실행 전 : 10 20 30 40 50 
+실행 후 : 5 20 30 40 50
+*/

@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int main(){
+    vector<int> v = {10, 30, 20, 50, 40};
+    
+    cout << "정렬 전 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << "\n";
+    
+    reverse(v.begin(), v.end());
+    
+    cout << "정렬 후 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << "\n";
+    
+    sort(v.begin(), v.end());
+    reverse(v.begin(), v.end());
+    
+    cout << "내림차순 결과 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    
+    return 0;
+}
+/*
+정렬 전 : 10 30 20 50 40 
+정렬 후 : 40 50 20 30 10 
+내림차순 결과 : 50 40 30 20 10
+*/

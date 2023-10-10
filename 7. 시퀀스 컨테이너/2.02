@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    
+    int N;
+    cin >> N;
+    vector<int> v;
+    
+    for(int i=0; i<N; i++){
+        int t;
+        cin >> t;
+        v.push_back(t);
+    }
+    
+    cout << "실행 결과 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    
+    return 0;
+}
+/*
+3
+10
+30
+20
+실행 결과 : 10 30 20
+*/

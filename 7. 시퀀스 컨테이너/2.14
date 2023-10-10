@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<int> v = {1, 2, 3};
+    
+    cout << "clear 전 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << "\nsize() : " << v.size() << ", capacity() : " << v.capacity() << "\n\n";
+    
+    v.clear();
+    
+    cout << "clear 후 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << "\nsize() : " << v.size() << ", capacity() : " << v.capacity() << "\n";
+    
+    return 0;
+}
+/*
+clear 전 : 1 2 3 
+size() : 3, capacity() : 3
+
+clear 후 : 
+size() : 0, capacity() : 3
+*/

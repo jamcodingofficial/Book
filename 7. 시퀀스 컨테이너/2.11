@@ -1,0 +1,47 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<int> v[5];
+    
+    for(int i=0; i<5; i++){
+        int s;
+        cin >> s;
+        for(int j=0; j<s; j++){
+            int t;
+            cin >> t;
+            v[i].push_back(t);
+        }
+    }
+    cout << "====================\n";
+    
+    for(int i=0; i<5; i++){
+        cout << "v[" << i << "] : ";
+        for(int j=0; j<v[i].size(); j++){
+            cout << v[i][j] << " ";
+        }
+        cout << "-> size : " << v[i].size() << "\n";
+    }
+    
+    return 0;
+}
+/*
+1
+10
+2
+10 20
+3
+10 20 30
+4
+10 20 30 40
+5
+10 20 30 40 50
+====================
+v[0] : 10 -> size : 1
+v[1] : 10 20 -> size : 2
+v[2] : 10 20 30 -> size : 3
+v[3] : 10 20 30 40 -> size : 4
+v[4] : 10 20 30 40 50 -> size : 5
+*/

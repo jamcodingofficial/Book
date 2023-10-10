@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+bool cmp(int x, int y){
+    return x > y;
+}
+
+int main(){
+    vector<int> v = {10, 30, 20, 50, 40};
+    
+    cout << "정렬 전 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    cout << "\n";
+    
+    sort(v.begin(), v.end(), cmp);
+    // sort(v.begin(), v.end(), greater<int>);
+    // sort(v.rbegin(), v.rend());
+    
+    cout << "정렬 후 : ";
+    for(int i=0; i<v.size(); i++){
+        cout << v[i] << " ";
+    }
+    
+    return 0;
+}
+/*
+정렬 전 : 10 30 20 50 40 
+정렬 후 : 50 40 30 20 10
+*/
