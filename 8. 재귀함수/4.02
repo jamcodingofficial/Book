@@ -21,7 +21,7 @@ int main(){
     
     cin >> n;
     stair(0);
-    cout << cnt;11
+    cout << cnt;
     
     return 0;
 }
