@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+void test(int x){ // 2, 5, 8, 11, ···
+    cout << "재귀의 늪 " << x << "\n"; // 3, 6, 9, 12, ···
+    test(x+1); // 4, 7, 10, 13, ···
+}
+
+int main(){
+    test(1); // 1
+    
+    return 0;
+}
+/*
+재귀의 늪 1
+재귀의 늪 2
+재귀의 늪 3
+   ·
+   ·
+   ·
+재귀의 늪 999998
+재귀의 늪 999999
+*/

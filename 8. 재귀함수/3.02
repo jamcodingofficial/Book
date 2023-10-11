@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void test(int x){
+    cout << "재귀의 늪 " << x << "\n";
+    if(x == 3){
+        return;
+    }
+    test(x+1);
+}
+
+int main(){
+    test(1);
+    
+    return 0;
+}
+/*
+재귀의 늪 1
+재귀의 늪 2
+재귀의 늪 3
+*/
