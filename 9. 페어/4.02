@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<pair<int,string>> vp;
+    
+    vp.push_back({10, "A"});
+    vp.push_back({20, "C"});
+    vp.push_back({20, "B"});
+    vp.push_back({30, "DD"});
+    vp.push_back({30, "DA"});
+    
+    sort(vp.begin(), vp.end());
+    
+    for(int i=0; i<vp.size(); i++){
+        cout << vp[i].second << " " << vp[i].first << "\n";
+    }
+    
+    return 0;
+}
+/*
+A 10
+B 20
+C 20
+DA 30
+DD 30
+*/

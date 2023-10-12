@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+using namespace std;
+
+int main(){
+    vector<pair<int,string>> vp;
+    
+    vp.push_back(make_pair(70, "Patrick")); // vp.push_back({70, "Patrick"});
+    vp.push_back({90, "Dennis"});
+    vp.push_back({60, "Tony"});
+    vp.push_back({75, "Leo"});
+    vp.push_back({80, "Josh"});
+    
+    sort(vp.rbegin(), vp.rend());
+    
+    for(int i=0; i<vp.size(); i++){
+        cout << vp[i].second << " " << vp[i].first << "\n";
+    }
+    
+    return 0;
+}
+/*
+Dennis 90
+Josh 80
+Leo 75
+Patrick 70
+Tony 60
+*/
