@@ -1,0 +1,31 @@
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+bool check[1001];
+int x, y, cnt;
+
+int main(){
+    fill(check, check+101, true);
+    
+    cin >> x >> y;
+    
+    for(int i=2; i<=1001; i++){
+        if(check[i] == true){
+            for(int j=i*2; j<=1001; j+=i){
+                check[j] = false;
+            }
+        }
+    }
+    
+    for(int i=2; i<=1001; i++){
+        if(check[i] == true && i >= x && i <= y){
+            cnt++;
+        }
+    }
+    
+    cout << cnt;
+    
+    return 0;
+}
